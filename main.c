@@ -197,7 +197,7 @@ void task3()
                 case 'Y':
                 ++count; //storing +1 when reading the needed letter
             }
-            printf("%c", c);
+            printf("%c", c);//printing the text itself
         }
     }
     fclose(fp_input); //closing the file
