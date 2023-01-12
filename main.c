@@ -173,13 +173,13 @@ void task3()
 
     printf("\t TASK 3");
 
-    if (fp_input==NULL) //перевірка, чи відкрився файл
+    if (fp_input==NULL) //checking if the file was opened correctly
     {
         printf("\n ERROR. CANNOT OPEN THE FILE.");
     }
     else
     {
-        while ((c = fgetc(fp_input)) != EOF) //читає з файлу символи поки не дійде до кінця
+        while ((c = fgetc(fp_input)) != EOF) //reads characters till the end of the file
         {
             switch(c)
             {
@@ -195,10 +195,11 @@ void task3()
                 case 'O':
                 case 'U':
                 case 'Y':
-                ++count;
+                ++count; //storing +1 when reading the needed letter
             }
+            printf("%c", c);
         }
     }
-    fclose(fp_input); //закриття файлу
+    fclose(fp_input); //closing the file
     printf("\n Number of chosen characters: %d", count);
 }
